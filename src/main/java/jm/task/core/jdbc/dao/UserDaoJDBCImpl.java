@@ -17,7 +17,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
         try {
             connection = connection();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS users (
         try(Statement stat = connection.createStatement()) {
             stat.executeUpdate(sql);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }
