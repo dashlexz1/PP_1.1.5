@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS users (
             prepst.setLong(1, id);
             prepst.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
     }
