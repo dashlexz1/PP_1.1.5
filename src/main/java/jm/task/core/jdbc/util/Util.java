@@ -17,7 +17,7 @@ public class Util {
             Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("соединение есть");
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("ошибка");
+            throw new RuntimeException("ошибка..");
         }
         return connection;
     }
